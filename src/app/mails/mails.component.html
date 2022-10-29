@@ -1,0 +1,45 @@
+
+<div *ngFor="let mail of mails" class="mail" 
+     [ngStyle]="{ 'font-weight': mail.completed==true ? 100 : 900 }">
+    
+         <p>{{ mail.title }}</p>
+
+</div>
+
+
+
+All possible API calls:
+-----------------------
+
+all            get     get( url )         
+specific       get     get( url/id )
+filtering      get     get( url?filter='red'  )
+pagination     get     get( url?limit=10&page=1  )
+sorting        get     get( url?sortBy=price&order=asc )
+                                                   desc
+
+create         post    post( url, data )
+
+update         put     put( url/id, data )
+
+delete         delete  delete( url/id )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

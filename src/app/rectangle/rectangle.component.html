@@ -1,0 +1,14 @@
+<h1>Rectangle</h1>
+
+<label>Length: </label>
+<input type="number" [(ngModel)]="length">
+<br>
+
+<label>Breadth: </label>
+<input type="number" [(ngModel)]="breadth">
+<br>
+
+<button (click)="area()">area</button>
+<button (click)="peremeter()">perimeter</button>
+
+<h1>Result is: {{ result }}</h1>

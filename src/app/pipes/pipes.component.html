@@ -1,0 +1,92 @@
+ <p>pipes works!</p>
+
+<h1>{{ name | uppercase }}</h1>
+
+<h2>{{ city | lowercase }}</h2>
+
+<h2>{{ dob }}</h2>
+<h2>{{ dob | date }}</h2>
+<h2>{{ dob | date:'yyyy-MMM-dd'  }}</h2>
+<h2>{{ dob | date:'yyyy-MM-dd'  }}</h2>
+<h2>{{ dob | date:'dd/MM/yy' }}</h2>
+<h2>{{ today }}</h2>
+<h2>{{ today | date:'full' }}</h2>
+<h2>{{ today | date:'fullDate' }}</h2>
+<h2>{{ today | date:'short' }}</h2>
+
+<h2>{{ user }}</h2>
+<h2>{{ user | json }}</h2>
+
+
+
+<!-- <h2>{{ price | price }}</h2>
+<h2>{{ age | age }}</h2>
+<h2>{{ marks | percentage }}</h2> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Pipes:
+-----
+Pipes are useful to transform data from one format
+to another format.
+
+    1) Predefined pipes
+
+        lowercase, uppercase, date, json
+
+    2) Custom pipes
+
+        ng g p pipeName
+
+How to apply pipe:
+------------------
+
+    <h2>{{ name | uppercase }}</h2>
+
+    <h2>{{ today | date:'yyyy-MM-dd' }}</h2> -->
+
+<!-- 
+How to implement custom pipe:
+-----------------------------
+1) create
+
+    ng g p price
+
+2) implement
+
+    transform( value:any, args:any )
+    {
+        return 'Rs. ' + value + '/-';
+    }
+
+3) apply
+
+    {{ product.cost | price }} -->
+
+
+
+
+
+
+
+
+
+

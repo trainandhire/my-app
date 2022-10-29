@@ -1,0 +1,41 @@
+<label>Rating:</label>
+<select [(ngModel)]="rating">
+    <option>5</option>
+    <option>4</option>
+    <option>3</option>
+    <option>2</option>
+    <option>1</option>
+</select>
+<br>
+
+<img src="/assets/five-star.jpeg" *ngIf="rating==5">
+<img src="/assets/four-star.jpeg" *ngIf="rating==4">
+<img src="/assets/three-star.jpeg" *ngIf="rating==3">
+<img src="/assets/two-star.jpeg" *ngIf="rating==2">
+<img src="/assets/one-star.jpeg" *ngIf="rating==1">
+<!-- 
+Directives:
+-----------
+    Directives are useful to alter the DOM. (Document Object Model)
+
+    Directives are three types:
+
+        1) Structural Directives
+        2) Attribute Directives
+        3) Component Directives
+
+    1) Structural Directives:
+    -------------------------
+        Structural Directives alters the DOM structure.
+        Ex: *ngFor, *ngIf
+
+        *ngFor:  iteratively adds the elements to the DOM.
+
+            <tr *ngFor="let user of users; let i=index"></tr>
+
+        *ngIf:   conditionally show and hide the elements.
+
+            <img src="/assets/bmw.jpg" *ngIf="company=='bmw'">
+
+
+ -->

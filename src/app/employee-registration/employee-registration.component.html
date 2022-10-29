@@ -1,0 +1,84 @@
+
+<h1 class="one">Employee Registration</h1>
+
+<label>Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+
+<label>age:</label>
+<input type="number" [(ngModel)]="age">
+<br>
+
+<label>company:</label>
+<input type="text" [(ngModel)]="company">
+<br>
+
+<label>package:</label>
+<input type="number" [(ngModel)]="package">
+<br>
+
+<button class="btn btn-primary" (click)="register()">register</button><br><br>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Company</th>
+            <th>Package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; let i=index">
+            <td>{{ i+1 }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.company }}</td>
+
+            <td 
+            [ngStyle]="{ 'color': employee.package >= 10 ? 'green' : 'red' }"
+            [ngClass]="{ 'yellow': employee.package >= 10, 'grey': employee.package < 10}"
+            >{{ employee.package }}</td>
+
+
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 
+RXjs:
+-----
+    Reactive extension for javascript.
+
+    RXjs is responsible for all Async operations in Angular.
+
+    There are three features in RXJS:
+        1) Promise
+        2) Observable
+        3) Subject
+
+
+              Promise                        Observable
+
+1)   single callback                      multiple callbacks
+
+2)  if we create Promise                 Observable won't execute automatically,
+    it will execute automatically        when ever we subscribe then only execute.
+
+3)  can not cancel promise in between    we can cancel observable with 
+                                         unsubscribe method.
+
+4)  less rxjs operators support          more rxjs operator support.
+
+        observable                           subject
+
+1)     unicast                               multicast
+
+2)   won't maintain state                  Maintain state -->
+
+
+
