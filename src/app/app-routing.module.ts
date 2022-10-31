@@ -6,6 +6,7 @@ import { BankComponent } from './bank/bank.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeRegistrationComponent } from './employee-registration/employee-registration.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
     {path:'bank', component: BankComponent},
     {path:'mails', component: MailsComponent},
     {path:'bank-details/:id', component: BankDetailsComponent},
-    {path:'create-account', component: CreateAccountComponent, canDeactivate:[NotifyGuard]}
+    {path:'create-account', component: CreateAccountComponent, canDeactivate:[NotifyGuard]},
+    {path:'create-user',component:CreateUserComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**', component: PagenotfoundComponent}
